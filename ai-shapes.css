@@ -1,0 +1,36 @@
+/* Yellow fluid background: only this named graphic is an exception to yellow surface prohibition. */
+.ws-fluid{position:relative;isolation:isolate;overflow:hidden;min-height:680px;background:#fff;display:grid;place-items:center;padding:100px 24px;box-sizing:border-box}
+.ws-fluid__art{position:absolute;inset:0;z-index:0;pointer-events:none}
+.ws-fluid__shape{position:absolute;width:28%;height:auto;overflow:visible;fill:#f5eb35;transform:translateY(var(--fluid-y,0px)) rotate(var(--fluid-r,0deg));will-change:transform}
+.ws-fluid__shape--1{left:-7%;top:18%}.ws-fluid__shape--3{right:-9%;top:45%;width:24%}
+.ws-fluid__copy{max-width:34em;text-align:center;background:#fff;padding:24px;box-sizing:border-box}
+.ws-fluid__copy h4{font:500 clamp(24px,3vw,40px)/1.6 var(--ws-ja,sans-serif);letter-spacing:.04em;margin:12px 0}
+.ws-fluid__copy p{font-size:12px;line-height:1.9}
+.ws-fluid__pause{position:absolute;bottom:24px;right:24px;min-height:44px;background:#fff;color:#232323;border:1px solid #e5e5e5;padding:8px 16px;cursor:pointer}
+.ws-fluid__pause:focus-visible{outline:2px solid #232323;outline-offset:3px}
+.ws-fluid-samples{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:28px 0}
+.ws-fluid-samples figure{margin:0;padding:24px;background:#fafafa;text-align:center}.ws-fluid-samples img{width:100%;height:140px;object-fit:contain;filter:brightness(0);opacity:.35}.ws-fluid-samples figcaption{font-size:11px;margin-top:16px}
+@media(max-width:767px){.ws-fluid{min-height:560px}.ws-fluid__shape--1{width:40%;left:-20%}.ws-fluid__shape--3{width:34%;right:-17%}.ws-fluid__copy{padding:16px;max-width:80%}.ws-fluid-samples{gap:8px}.ws-fluid-samples figure{padding:12px}.ws-fluid-samples img{height:90px}}
+@media(prefers-reduced-motion:reduce){.ws-fluid__shape{transform:none!important;will-change:auto}.ws-fluid__pause{display:none}}
+@media print{.ws-fluid{min-height:360px;break-inside:avoid}.ws-fluid__shape{transform:none!important;will-change:auto}.ws-fluid__pause{display:none}}
+
+/* Occasional background placement across the guideline. No layout space is added. */
+.ws-fluid-context{position:relative;isolation:isolate}
+.ws-fluid-context__clip{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;border-radius:0}
+.ws-fluid-context__clip .ws-fluid__shape{width:clamp(180px,34%,360px);top:180px}
+.ws-fluid-context__clip--left .ws-fluid__shape{left:-16%}
+.ws-fluid-context__clip--right .ws-fluid__shape{right:-17%;top:340px}
+#top .ws-fluid-context__clip .ws-fluid__shape{top:240px;width:34%;left:-19%}
+.ws-fluid-global-pause{font:inherit;font-size:10px;line-height:1.6;border:0;border-bottom:1px solid #686868;border-radius:0;padding:8px 0;margin-top:12px;color:#232323;background:transparent;text-align:left}
+@media(max-width:767px){.ws-fluid-context__clip .ws-fluid__shape{width:50%;top:170px}.ws-fluid-context__clip--left .ws-fluid__shape{left:-34%}.ws-fluid-context__clip--right .ws-fluid__shape{right:-35%}#top .ws-fluid-context__clip .ws-fluid__shape{left:-30%;width:50%}.ws-fluid-global-pause{min-height:44px}}
+@media(prefers-reduced-motion:reduce){.ws-fluid-global-pause{display:none}}
+@media print{.ws-fluid-context__clip,.ws-fluid-global-pause{display:none}}
+
+/* Keep artwork in a nonnegative layer; content is a separate foreground layer. */
+.ws-fluid-context > :not(.ws-fluid-context__clip){position:relative;z-index:1}
+.ws-fluid-context > .ws-fluid-context__clip{position:absolute;z-index:0;display:block;visibility:visible;opacity:1}
+.ws-fluid > .ws-fluid__art{z-index:0}
+.ws-fluid > .ws-fluid__copy,.ws-fluid > .ws-fluid__pause{z-index:1}
+.ws-fluid__shape{display:block;visibility:visible;opacity:1;transform-origin:50% 50%;transform-box:fill-box}
+.ws-fluid__shape path{fill:#f5eb35!important;stroke:none}
+@media print{.ws-fluid-context > .ws-fluid-context__clip{display:none}}

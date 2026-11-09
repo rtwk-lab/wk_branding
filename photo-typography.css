@@ -1,0 +1,12 @@
+/* Photo typography · requires weskiii-system.css. Licensed font kits load separately. */
+.ws-photo-type{container-type:inline-size;position:relative;aspect-ratio:2/3;overflow:hidden;background:#e5e5e5;isolation:isolate;}
+.ws-photo-type>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:none;}
+.ws-photo-type__copy{position:absolute;z-index:2;left:8%;top:8%;width:78%;color:#232323;}
+.ws-photo-type__en{margin:0;font:500 7.8cqw/1.12 var(--ws-display,circe,sans-serif);letter-spacing:.025em;}
+.ws-photo-type__ja{margin:4cqw 0 0;font:400 3.2cqw/1.8 var(--ws-ja,sans-serif);letter-spacing:.04em;}
+.ws-photo-type--white .ws-photo-type__copy{color:#fff;}
+.ws-photo-type--white::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(35,35,35,.4) 0%,rgba(35,35,35,.28) 24%,transparent 47%);pointer-events:none;}
+.ws-photo-type--compact .ws-photo-type__copy{width:43%;}
+.ws-photo-type--compact .ws-photo-type__en{font-size:6.8cqw;}
+/* Fixed artboards: use these proportions at source size; build a separate responsive layout for live copy. */
+@media(prefers-reduced-motion:reduce){.ws-photo-type{animation:none}}

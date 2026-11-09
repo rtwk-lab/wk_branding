@@ -1,0 +1,43 @@
+/* weskiii interaction system v1.3 — tokens: weskiii-system.css */
+.ws-emphasis{position:relative;display:inline;padding-bottom:.16em;background:linear-gradient(var(--ws-yellow,#f5eb35),var(--ws-yellow,#f5eb35)) 0 100%/100% .12em no-repeat;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.ws-accent-rule{display:block;width:64px;height:6px;background:var(--ws-yellow,#f5eb35);border:0;margin:24px 0;}
+.ws-attention-group{display:flex;align-items:center;gap:24px;padding:28px 0;}
+.ws-attention{width:64px;height:64px;min-width:48px;flex:none;border:0;border-radius:0;background:transparent;color:var(--ws-ink,#232323);display:grid;place-items:center;padding:0;cursor:pointer;}
+.ws-attention__glyph{display:block;font:700 42px/1 var(--ws-display,circe,sans-serif);transform-origin:50% 55%;}
+.ws-attention.is-playing .ws-attention__glyph{animation:ws-pop-turn 640ms cubic-bezier(.22,.68,.26,1) both;}
+.ws-attention:focus-visible{outline:none;}
+.ws-attention:focus-visible .ws-attention__glyph{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:2px;}
+@keyframes ws-pop-turn{0%{transform:translateY(12px) rotate(-40deg) scale(.65)}65%{transform:translateY(-4px) rotate(375deg) scale(1.1)}100%{transform:translateY(0) rotate(360deg) scale(1)}}
+/* Card: image and its copy share a proportional composition, details stay in flow. */
+.ws-story-card{max-width:560px;margin-inline:auto;container-type:inline-size;color:var(--ws-ink,#232323);}
+.ws-story-card__media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--ws-gray,#e5e5e5);}
+.ws-story-card__media>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 55%;}
+.ws-story-card__copy{position:absolute;top:6%;left:6%;right:6%;color:#fff;padding:3%;background:rgb(35 35 35 / .68);}
+
+.ws-story-card__copy h3{margin:0 0 2cqw;font:700 clamp(20px,6cqw,36px)/1.15 var(--ws-display,circe,sans-serif);letter-spacing:.025em;color:#fff;}
+.ws-story-card__copy p{margin:0;font:600 clamp(13px,3.2cqw,19px)/1.7 var(--ws-ja,sans-serif);letter-spacing:.04em;color:#fff;}
+.ws-story-card__toggle{position:absolute;right:0;bottom:0;width:48px;height:48px;border:0;border-radius:0;background:#fff;color:var(--ws-ink,#232323);display:grid;place-items:center;padding:0;cursor:pointer;}
+.ws-story-card__toggle span{font:300 32px/1 var(--ws-body,sans-serif);transition:transform 180ms;}
+.ws-story-card__toggle[aria-expanded=true] span{transform:rotate(45deg);}
+.ws-story-card__toggle:focus-visible{outline:2px solid #232323;outline-offset:-5px;}
+.ws-story-card__info{text-align:center;padding:20px 16px 24px;}
+.ws-story-card__brand{font:700 17px/1.5 var(--ws-display,circe,sans-serif);letter-spacing:.06em;margin:0 0 16px;}
+.ws-story-card__name{font:400 17px/1.6 var(--ws-body,sans-serif);letter-spacing:.04em;margin:0 0 16px;}
+.ws-story-card__price{font:400 17px/1.5 var(--ws-body,sans-serif);font-variant-numeric:tabular-nums;margin:0;}
+.ws-story-card__details{padding:20px 24px;border-top:1px solid var(--ws-gray,#e5e5e5);font-size:14px;line-height:1.8;}
+.ws-story-card__details[hidden]{display:none;}
+/* Progress: yellow indicates the elapsed / completed part. Never fake loading data. */
+.ws-progress{display:block;appearance:none;-webkit-appearance:none;width:100%;height:6px;border:0;border-radius:0;background:var(--ws-ink,#232323);color:var(--ws-yellow,#f5eb35);overflow:hidden;}
+.ws-progress::-webkit-progress-bar{background:var(--ws-ink,#232323);}
+.ws-progress::-webkit-progress-value{background:var(--ws-yellow,#f5eb35);}
+.ws-progress::-moz-progress-bar{background:var(--ws-yellow,#f5eb35);}
+.ws-progress-label{display:flex;justify-content:space-between;gap:16px;margin-bottom:12px;font:400 13px/1.5 var(--ws-body,sans-serif);}
+.ws-progress-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:20px;}
+.ws-progress-controls input{accent-color:var(--ws-ink,#232323);min-height:44px;max-width:160px;}
+.ws-reading-progress{position:fixed;z-index:50;inset:0 0 auto;width:100%;height:5px;border:0;background:#232323;}
+.ws-reading-progress::-webkit-progress-bar{background:#232323;}
+.ws-reading-progress::-webkit-progress-value{background:#f5eb35;}
+.ws-reading-progress::-moz-progress-bar{background:#f5eb35;}
+@media(max-width:767px){.ws-attention{width:52px;height:52px}.ws-attention__glyph{font-size:34px}.ws-story-card__copy p{font-size:clamp(12px,3.2cqw,18px)}}
+@media(prefers-reduced-motion:reduce){.ws-attention.is-playing .ws-attention__glyph{animation:none}.ws-story-card__toggle span{transition:none}}
+@media print{.ws-reading-progress,.ws-attention{display:none}.ws-story-card__details[hidden]{display:block}}

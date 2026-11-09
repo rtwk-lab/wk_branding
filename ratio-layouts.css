@@ -1,0 +1,56 @@
+/* Ratio compositions · add to weskiii-system.css. Shapes are decorative.
+Uses container query units to keep type proportional to each artwork.
+Export sizes and safe margins are art-direction starting points, not platform specifications. */
+.ws-art {container-type:inline-size;position:relative;overflow:hidden;background:var(--ws-white,#fff);color:var(--ws-ink,#232323);border:1px solid var(--ws-gray,#e5e5e5);isolation:isolate;}
+.ws-art *{box-sizing:border-box;}
+.ws-art__inner {position:absolute;inset:0;}
+.ws-art__photo {position:absolute;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;}
+.ws-art__copy {position:absolute;z-index:2;left:8%;top:12%;width:80%;}
+.ws-art__eyebrow {margin:0 0 3cqw;font:600 2.4cqw/1.5 var(--ws-display,circe,sans-serif);letter-spacing:.1em;}
+.ws-art__title {margin:0;font:500 9.5cqw/1.12 var(--ws-display,circe,sans-serif);letter-spacing:.025em;}
+.ws-art__sub {margin:4cqw 0 0;font:400 3cqw/1.85 var(--ws-ja,sans-serif);letter-spacing:.04em;}
+.ws-art__signature {position:absolute;z-index:2;left:8%;bottom:10%;margin:0;font:400 2.2cqw/1.5 var(--ws-body,sans-serif);letter-spacing:.04em;}
+.ws-art--story {aspect-ratio:9/16;--safe-top:14%;--safe-bottom:18%;}
+.ws-art--story .ws-art__photo {top:44%;height:42%;}
+.ws-art--story .ws-art__copy {top:16%;}
+.ws-art--story .ws-art__signature {bottom:20%;background:var(--ws-white,#fff);padding:1.5cqw 2cqw;left:6%;}
+.ws-art--feed {aspect-ratio:4/5;}
+.ws-art--feed .ws-art__photo {top:43%;height:45%;left:8%;width:84%;}
+.ws-art--feed .ws-art__copy {top:10%;}
+.ws-art--feed .ws-art__title {font-size:8.2cqw;}
+.ws-art--feed .ws-art__signature {bottom:5%;font-size:2.2cqw;}
+.ws-art--square {aspect-ratio:1;}
+.ws-art--square .ws-art__photo {left:49%;top:38%;width:43%;height:48%;}
+.ws-art--square .ws-art__copy {top:12%;width:84%;}
+.ws-art--square .ws-art__title {font-size:9cqw;}
+.ws-art--square .ws-art__sub {width:42%;font-size:2.7cqw;}
+.ws-art--landscape {aspect-ratio:3/2;}
+.ws-art--landscape .ws-art__photo {left:55%;width:39%;top:10%;height:80%;}
+.ws-art--landscape .ws-art__copy {left:6%;top:15%;width:43%;}
+.ws-art--landscape .ws-art__title {font-size:7.2cqw;}
+.ws-art--landscape .ws-art__sub {font-size:2.1cqw;}
+.ws-art--landscape .ws-art__signature {left:6%;bottom:12%;font-size:1.6cqw;}
+.ws-art--hero {aspect-ratio:16/9;}
+.ws-art--hero .ws-art__photo {left:58%;width:36%;top:10%;height:80%;}
+.ws-art--hero .ws-art__copy {left:6%;top:16%;width:47%;}
+.ws-art--hero .ws-art__eyebrow {font-size:1.5cqw;margin-bottom:2cqw;}
+.ws-art--hero .ws-art__title {font-size:6.5cqw;}
+.ws-art--hero .ws-art__sub {font-size:1.7cqw;margin-top:2cqw;}
+.ws-art--hero .ws-art__signature {left:6%;bottom:13%;font-size:1.4cqw;}
+.ws-art--banner {aspect-ratio:3/1;}
+.ws-art--banner .ws-art__photo {left:73%;width:21%;top:14%;height:72%;}
+.ws-art--banner .ws-art__copy {left:6%;top:22%;width:64%;}
+.ws-art--banner .ws-art__eyebrow {font-size:1.4cqw;margin-bottom:1cqw;}
+.ws-art--banner .ws-art__title {font-size:5.3cqw;white-space:nowrap;}
+.ws-art--banner .ws-art__sub {font-size:1.4cqw;margin-top:1.6cqw;}
+.ws-art--banner .ws-art__signature {display:none;}
+.ws-art--paper {aspect-ratio:1/1.4142;}
+.ws-art--paper .ws-art__copy {left:8%;top:14%;}
+.ws-art--paper .ws-art__title {font-size:13cqw;line-height:1.16;}
+.ws-art--paper .ws-art__sub {font-size:3.2cqw;margin-top:8cqw;}
+.ws-art--paper .ws-art__signature {bottom:8%;font-size:2.4cqw;border-top:1px solid var(--ws-ink,#232323);padding-top:3cqw;width:84%;}
+/* Safe-area preview; never include guide lines in exported artworks. */
+.ws-art::after {content:"";position:absolute;z-index:4;pointer-events:none;inset:var(--safe-top,8%) 8% var(--safe-bottom,8%);border:1px dashed #686868;opacity:0;}
+.show-safe .ws-art::after {opacity:.65;}
+
+.ws-art--story .ws-art__photo{object-position:50% 50%}.ws-art--feed .ws-art__photo{object-position:50% 45%}.ws-art--square .ws-art__photo,.ws-art--banner .ws-art__photo{object-position:50% 100%}.ws-art--hero .ws-art__photo{object-position:50% 60%}.ws-art--landscape .ws-art__photo{object-position:50% 55%}

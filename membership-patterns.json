@@ -1,0 +1,27 @@
+{
+  "system_name": "weskiii store メンバーシップ",
+  "version": "2.0",
+  "patterns": [
+    {
+      "name": "バースデークーポン",
+      "photo": "membership/birthday.jpg",
+      "ticket": "membership/ticket-birthday.svg",
+      "icon": "membership/icon-birthday.svg",
+      "mark": "membership/mark-ws.svg"
+    },
+    {
+      "name": "送料無料クーポン",
+      "photo": "membership/shipping.jpg",
+      "ticket": "membership/ticket-shipping.svg",
+      "icon": "membership/icon-shipping.svg",
+      "mark": "membership/mark-ws.svg"
+    },
+    {
+      "name": "先行販売チケット",
+      "photo": "membership/early-access.jpg",
+      "ticket": "membership/ticket-early-access.svg",
+      "icon": "membership/icon-early-access.svg",
+      "mark": "membership/mark-ws.svg"
+    }
+  ]
+}

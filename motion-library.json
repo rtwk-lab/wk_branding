@@ -1,0 +1,67 @@
+[
+  {
+    "id": "lines",
+    "html": "<article class=\"ws-motion-card\" data-ws-motion=\"lines\"><div class=\"ws-motion-card__head\"><h4>01 / Line reveal</h4><span>SplitText / lines</span></div><div class=\"ws-motion-stage\"><p class=\"ws-motion-text ws-motion-text--ja\" lang=\"ja\"><span class=\"ws-motion-sr-only\">商品のある暮らしを、 少し心地よく。</span><span data-ws-motion-text aria-hidden=\"true\">商品のある暮らしを、<br>少し心地よく。</span></p></div><p class=\"ws-motion-meta\"><strong>行ごとに下から現れる</strong><br>和文の短い見出し。1行ずつマスクから16〜24px程度の移動感で現れ、読み終えたら静止。<br>0.65秒 / 行差0.10秒 / power2.out</p><div class=\"ws-motion-foot\"><button type=\"button\" data-ws-motion-replay>もう一度再生</button><span data-ws-motion-status>再生できます</span></div></article>",
+    "css": "motion-library.css",
+    "js": "motion-library.js",
+    "requires": [
+      "vendor/gsap/gsap.min.js",
+      "vendor/gsap/SplitText.min.js",
+      "vendor/gsap/ScrambleTextPlugin.min.js",
+      "vendor/gsap/TextPlugin.min.js"
+    ],
+    "duration_rule": "0.65秒 / 行差0.10秒 / power2.out"
+  },
+  {
+    "id": "words",
+    "html": "<article class=\"ws-motion-card\" data-ws-motion=\"words\"><div class=\"ws-motion-card__head\"><h4>02 / Word reveal</h4><span>SplitText / words</span></div><div class=\"ws-motion-stage\"><p class=\"ws-motion-text\" lang=\"en\"><span class=\"ws-motion-sr-only\">we share stories.</span><span data-ws-motion-text aria-hidden=\"true\">we share stories.</span></p></div><p class=\"ws-motion-meta\"><strong>単語を順に、やわらかく出す</strong><br>英語の2〜5語の見出し。16pxだけ移動し、文の順序に沿って現れる。大きく跳ねさせない。<br>0.60秒 / 単語差0.09秒 / power2.out</p><div class=\"ws-motion-foot\"><button type=\"button\" data-ws-motion-replay>もう一度再生</button><span data-ws-motion-status>再生できます</span></div></article>",
+    "css": "motion-library.css",
+    "js": "motion-library.js",
+    "requires": [
+      "vendor/gsap/gsap.min.js",
+      "vendor/gsap/SplitText.min.js",
+      "vendor/gsap/ScrambleTextPlugin.min.js",
+      "vendor/gsap/TextPlugin.min.js"
+    ],
+    "duration_rule": "0.60秒 / 単語差0.09秒 / power2.out"
+  },
+  {
+    "id": "chars",
+    "html": "<article class=\"ws-motion-card\" data-ws-motion=\"chars\"><div class=\"ws-motion-card__head\"><h4>03 / Character reveal</h4><span>SplitText / chars</span></div><div class=\"ws-motion-stage\"><p class=\"ws-motion-text\" lang=\"en\"><span class=\"ws-motion-sr-only\">insight for everyday.</span><span data-ws-motion-text aria-hidden=\"true\">insight for everyday.</span></p></div><p class=\"ws-motion-meta\"><strong>文字が少し回転して整列する</strong><br>短い英語コピー。回転は4°、移動は12pxまで。商品情報・価格・長文には使わない。<br>0.45秒 / 文字差0.014秒 / power2.out</p><div class=\"ws-motion-foot\"><button type=\"button\" data-ws-motion-replay>もう一度再生</button><span data-ws-motion-status>再生できます</span></div></article>",
+    "css": "motion-library.css",
+    "js": "motion-library.js",
+    "requires": [
+      "vendor/gsap/gsap.min.js",
+      "vendor/gsap/SplitText.min.js",
+      "vendor/gsap/ScrambleTextPlugin.min.js",
+      "vendor/gsap/TextPlugin.min.js"
+    ],
+    "duration_rule": "0.45秒 / 文字差0.014秒 / power2.out"
+  },
+  {
+    "id": "scramble",
+    "html": "<article class=\"ws-motion-card\" data-ws-motion=\"scramble\"><div class=\"ws-motion-card__head\"><h4>04 / Quiet scramble</h4><span>ScrambleText</span></div><div class=\"ws-motion-stage\"><p class=\"ws-motion-text\" lang=\"en\"><span class=\"ws-motion-sr-only\">imagine a better day.</span><span data-ws-motion-text aria-hidden=\"true\">imagine a better day.</span></p></div><p class=\"ws-motion-meta\"><strong>文字が入れ替わり、言葉になる</strong><br>読みものや特集の短い英語タイトルに限定。小文字だけで変化させ、0.8秒で元の文章へ。日本語の説明文には使わない。<br>0.80秒 / reveal delay 0.12秒 / speed 0.4</p><div class=\"ws-motion-foot\"><button type=\"button\" data-ws-motion-replay>もう一度再生</button><span data-ws-motion-status>再生できます</span></div></article>",
+    "css": "motion-library.css",
+    "js": "motion-library.js",
+    "requires": [
+      "vendor/gsap/gsap.min.js",
+      "vendor/gsap/SplitText.min.js",
+      "vendor/gsap/ScrambleTextPlugin.min.js",
+      "vendor/gsap/TextPlugin.min.js"
+    ],
+    "duration_rule": "0.80秒 / reveal delay 0.12秒 / speed 0.4"
+  },
+  {
+    "id": "replace",
+    "html": "<article class=\"ws-motion-card\" data-ws-motion=\"replace\"><div class=\"ws-motion-card__head\"><h4>05 / Text reveal</h4><span>TextPlugin</span></div><div class=\"ws-motion-stage\"><p class=\"ws-motion-text\" lang=\"en\"><span class=\"ws-motion-sr-only\">we choose with care.</span><span data-ws-motion-text aria-hidden=\"true\">we choose with care.</span></p></div><p class=\"ws-motion-meta\"><strong>言葉を区切りごとに表示する</strong><br>3〜4語の英語コピーを単語単位で表示。入力カーソルや点滅は付けず、最終文はそのまま残す。<br>0.80秒 / delimiter: space / ease: none</p><div class=\"ws-motion-foot\"><button type=\"button\" data-ws-motion-replay>もう一度再生</button><span data-ws-motion-status>再生できます</span></div></article>",
+    "css": "motion-library.css",
+    "js": "motion-library.js",
+    "requires": [
+      "vendor/gsap/gsap.min.js",
+      "vendor/gsap/SplitText.min.js",
+      "vendor/gsap/ScrambleTextPlugin.min.js",
+      "vendor/gsap/TextPlugin.min.js"
+    ],
+    "duration_rule": "0.80秒 / delimiter: space / ease: none"
+  }
+]

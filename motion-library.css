@@ -1,0 +1,27 @@
+/* weskiii text motion · GSAP 3.15.1 · white ground, ink typography, restrained movement */
+.ws-motion-library{border-top:1px solid #232323;margin:56px 0 40px;padding-top:40px;}
+.ws-motion-library>h3{font:700 clamp(28px,3vw,40px)/1.2 var(--ws-display,circe,sans-serif);letter-spacing:.025em;margin:12px 0 20px;}
+.ws-motion-library>p{font-size:14px;line-height:1.9;max-width:46em;}
+.ws-motion-controls{display:flex;align-items:center;gap:20px;margin:24px 0;font-size:12px;}
+.ws-motion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.ws-motion-card{border:1px solid #e5e5e5;padding:24px;min-width:0;}
+.ws-motion-card:last-child{grid-column:1/-1;}
+.ws-motion-card__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
+.ws-motion-card__head h4{font-size:16px;font-weight:600;margin:0;}
+.ws-motion-card__head span{font:10px/1.6 monospace;color:#686868;}
+.ws-motion-stage{position:relative;min-height:190px;display:flex;align-items:center;padding:32px 0;}
+.ws-motion-text{width:100%;margin:0;font:700 clamp(26px,3.2vw,42px)/1.2 var(--ws-display,circe,sans-serif);letter-spacing:.025em;overflow-wrap:break-word;}
+.ws-motion-text--ja{font-family:var(--ws-ja,sans-serif);font-size:clamp(24px,2.5vw,32px);font-weight:500;line-height:1.6;letter-spacing:.04em;}
+.ws-motion-text [data-ws-motion-text]{display:block;min-height:2.5em;}
+.ws-motion-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+.ws-motion-meta{font-size:12px;line-height:1.9;border-top:1px solid #e5e5e5;padding-top:16px;margin:0;}
+.ws-motion-foot{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-top:20px;}
+.ws-motion-foot span{font-size:10px;color:#686868;}
+.ws-motion-foot button{min-height:44px;padding:8px 20px;border:1px solid #232323;border-radius:999px;background:white;color:#232323;}
+.ws-motion-foot button:hover{background:#e5e5e5;}
+.ws-motion-foot button:disabled{cursor:default;opacity:.65;}
+.ws-motion-card details{border-top:1px solid #e5e5e5;margin-top:20px;padding-top:12px;}
+.ws-motion-card summary{cursor:pointer;font-size:12px;}
+@media(max-width:767px){.ws-motion-grid{grid-template-columns:1fr}.ws-motion-card:last-child{grid-column:auto}.ws-motion-card{padding:20px}.ws-motion-stage{min-height:170px}.ws-motion-text{font-size:30px}.ws-motion-text--ja{font-size:24px}.ws-motion-library{margin-top:40px;padding-top:28px}}
+@media(prefers-reduced-motion:reduce){.ws-motion-library *{animation:none!important;transition:none!important}}
+@media print{.ws-motion-controls,.ws-motion-foot button{display:none}.ws-motion-card{break-inside:avoid}.ws-motion-grid{grid-template-columns:1fr 1fr}.ws-motion-card details{display:none}}

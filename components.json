@@ -1,0 +1,97 @@
+{
+  "version": "2.0",
+  "requires": "weskiii-system.css; interaction examples also require ws-interactions.css + ws-interactions.js",
+  "components": [
+    {
+      "id": "header",
+      "name": "Header / ナビゲーション",
+      "category": "layout",
+      "css": ".ws-header { display:flex; align-items:center; justify-content:space-between; min-height:80px; border-bottom:1px solid var(--ws-line); }",
+      "html": "<header class=\"ws-header\"><a href=\"/\"><img src=\"logo.svg\" width=\"96\" alt=\"weskiii store\"></a><nav aria-label=\"メイン\"><a href=\"#story\">Story</a> / <a href=\"#items\">Items</a></nav></header>"
+    },
+    {
+      "id": "hero",
+      "name": "Hero / 最初のひとこと",
+      "category": "layout",
+      "css": ".ws-hero { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }\n.ws-hero__image { width:100%; aspect-ratio:4/5; object-fit:cover; }\n@media(max-width:767px){.ws-hero{grid-template-columns:1fr;gap:32px}}",
+      "html": "<section class=\"ws-section ws-hero\"><div><p class=\"ws-eyebrow\">FOR EVERY LITTLE MOMENT</p><h1 class=\"ws-title\" lang=\"ja\">いつもの時間に、小さな「できた」を。</h1><p class=\"ws-copy\" lang=\"ja\">毎日の食卓になじむ商品を選びました。</p><a class=\"ws-button\" href=\"#items\">商品を見る</a></div><img class=\"ws-hero__image ws-focal-image\" src=\"photos/cup-and-texture.jpg\" width=\"600\" height=\"750\" alt=\"木と布に囲まれたハンドル付きカップ\" fetchpriority=\"high\" style=\"object-fit:cover;object-position:50% 78%;\"></section>"
+    },
+    {
+      "id": "heading",
+      "name": "Section heading / 英日併記",
+      "category": "content",
+      "css": ".ws-heading{display:flex;justify-content:space-between;gap:24px;margin-bottom:32px;}\n.ws-heading h2{font:700 clamp(28px,3vw,40px)/1.2 var(--ws-display);margin:0;}",
+      "html": "<div class=\"ws-heading\"><div><h2 lang=\"en\">Little discoveries.</h2><p lang=\"ja\">暮らしの、小さな発見。</p></div></div>"
+    },
+    {
+      "id": "buttons",
+      "name": "Buttons / 行動の優先順位",
+      "category": "ui",
+      "css": ".ws-button{display:inline-flex;align-items:center;gap:24px;min-height:48px;padding:12px 28px;border:1px solid var(--ws-ink);border-radius:999px;background:var(--ws-ink);color:var(--ws-white);text-decoration:none;}\n.ws-button--secondary{background:var(--ws-white);color:var(--ws-ink);}\n.ws-button:focus-visible{outline:2px solid var(--ws-ink);outline-offset:4px;}",
+      "html": "<a class=\"ws-button\" href=\"#items\">商品を見る <span aria-hidden=\"true\">→</span></a>\n<a class=\"ws-button ws-button--secondary\" href=\"#story\">詳しく読む</a>\n<button class=\"ws-button\" type=\"button\" disabled>準備中</button>"
+    },
+    {
+      "id": "story",
+      "name": "Story / 写真と理由",
+      "category": "content",
+      "css": ".ws-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}\n.ws-split img{width:100%;aspect-ratio:4/3;object-fit:cover;}\n@media(max-width:767px){.ws-split{grid-template-columns:1fr;gap:32px;}}",
+      "html": "<section id=\"story\" class=\"ws-split\"><img src=\"photos/cup-and-texture.jpg\" width=\"600\" height=\"450\" alt=\"木のテーブルに置いたカップ\" loading=\"lazy\" style=\"object-fit:cover;object-position:50% 78%;\" class=\"ws-focal-image\"><div><p class=\"ws-eyebrow\">WE SHARE STORIES</p><h2 class=\"ws-title\" lang=\"ja\">手に取る理由が、ちゃんとある。</h2><p class=\"ws-copy\" lang=\"ja\">ここに選んだ理由と確認済みの特長を記載。</p></div></section>"
+    },
+    {
+      "id": "product",
+      "name": "Product card / 比較しやすい情報",
+      "category": "content",
+      "css": ".ws-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;}\n.ws-card__media{aspect-ratio:1;background:var(--ws-gray);overflow:hidden;}\n.ws-card__media img{width:100%;height:100%;object-fit:contain;}\n.ws-price{font-family:var(--ws-body);font-variant-numeric:tabular-nums;}\n@media(max-width:767px){.ws-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;}}",
+      "html": "<article class=\"ws-card\"><div class=\"ws-card__media\"><img src=\"photos/cup-and-texture.jpg\" width=\"600\" height=\"600\" loading=\"lazy\" alt=\"シッピーカップ\"></div><div class=\"ws-card__body\"><p>b.box</p><h3><a href=\"https://weskiii.com/\">sippy cup</a></h3><p class=\"ws-price\">¥2,640（税込・参考）</p></div></article>"
+    },
+    {
+      "id": "tags",
+      "name": "Labels / 小さく整理する",
+      "category": "ui",
+      "css": ".ws-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ws-line);border-radius:999px;padding:4px 12px;font-size:12px;}\n.ws-dot{width:8px;height:8px;background:var(--ws-yellow);border-radius:50%;}",
+      "html": "<span class=\"ws-tag\">New</span>\n<span class=\"ws-tag\">For Baby</span>"
+    },
+    {
+      "id": "faq",
+      "name": "FAQ / 読む量を選べる",
+      "category": "content",
+      "css": ".ws-faq{border-top:1px solid var(--ws-line);}\n.ws-faq details{border-bottom:1px solid var(--ws-line);padding:20px 0;}\n.ws-faq summary{cursor:pointer;font-weight:600;}",
+      "html": "<div class=\"ws-faq\"><details><summary>購入前の質問を記載</summary><p lang=\"ja\">確認済みの回答を簡潔に記載します。</p></details></div>"
+    },
+    {
+      "id": "field",
+      "name": "Form field / 迷いの少ない入力",
+      "category": "ui",
+      "css": ".ws-field{display:grid;gap:8px;max-width:480px;}\n.ws-field input{min-height:48px;border:1px solid var(--ws-muted);border-radius:4px;padding:12px 16px;font:inherit;background:var(--ws-white);color:var(--ws-ink);}",
+      "html": "<div class=\"ws-field\"><label for=\"email\">メールアドレス</label><input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" aria-describedby=\"email-help\"><small id=\"email-help\">確認メールをお送りします。</small></div>"
+    },
+    {
+      "id": "cta",
+      "name": "Closing CTA / 最後のひと押し",
+      "category": "layout",
+      "css": ".ws-cta{border-top:1px solid var(--ws-line);padding-block:64px;display:flex;align-items:center;justify-content:space-between;gap:32px;}\n@media(max-width:767px){.ws-cta{flex-direction:column;align-items:flex-start;}}",
+      "html": "<section class=\"ws-cta\"><h2 lang=\"ja\">あなたの日常に、合うものを。</h2><a class=\"ws-button\" href=\"https://weskiii.com/\">ストアを見る</a></section>"
+    },
+    {
+      "id": "attention",
+      "name": "Attention / ! と i のポップアップ",
+      "category": "ui",
+      "html": "<div class=\"ws-attention-group\"><button class=\"ws-attention\" data-ws-attention type=\"button\" aria-label=\"iと感嘆符のアテンションを再生\" aria-describedby=\"attention-description\"><span class=\"ws-attention__glyph\" aria-hidden=\"true\">i</span></button><div><p class=\"micro\">A little discovery</p><h3 style=\"font-size:25px;font-weight:500;margin:8px 0\">ヒントと発見のアテンション</h3><p id=\"attention-description\" style=\"font-size:13px\">iはヒント、!は発見。5秒ごとに回転しながら切り替わります。ボタンでも再生できます。</p><button class=\"attention-pause\" type=\"button\" data-ws-attention-pause aria-pressed=\"false\">自動再生を停止</button></div></div>",
+      "requires": "weskiii-system.css + ws-interactions.css + ws-interactions.js"
+    },
+    {
+      "id": "story-card",
+      "name": "Image story card / 写真・説明・商品",
+      "category": "content",
+      "html": "<article class=\"ws-story-card\"><div class=\"ws-story-card__media\"><img src=\"photos/cup-and-texture.jpg\" alt=\"木と布に囲まれたハンドル付きカップ\" loading=\"lazy\"><div class=\"ws-story-card__copy\"><h3 lang=\"en\">How to use</h3><p lang=\"ja\">いつもの商品に、選ぶ理由を。<br>手に取る時間を、少し心地よく。</p></div><button class=\"ws-story-card__toggle\" type=\"button\" data-ws-card-toggle aria-expanded=\"false\" aria-controls=\"card-more\" aria-label=\"使い方の補足を開く\"><span aria-hidden=\"true\">+</span></button></div><div class=\"ws-story-card__info\"><p class=\"ws-story-card__brand\">b.box</p><p class=\"ws-story-card__name\">sippy cup</p><p class=\"ws-story-card__price\">¥2,640 <small>（税込・参考）</small></p></div><div class=\"ws-story-card__details\" id=\"card-more\" hidden><p>このパーツは、写真の中の使う場面と、その下の商品情報をつなげます。本文には確認済みの仕様や使い方を入れ、＋で補足を展開します。</p></div></article>",
+      "requires": "weskiii-system.css + ws-interactions.css + ws-interactions.js"
+    },
+    {
+      "id": "progress",
+      "name": "Progress / 進行する黄色",
+      "category": "ui",
+      "html": "<div data-ws-progress-demo><div class=\"ws-progress-label\"><label for=\"progress-example\">表示時間の進行 / 6秒の操作見本</label><output>35%</output></div><progress class=\"ws-progress\" id=\"progress-example\" value=\"35\" max=\"100\">35%</progress><div class=\"ws-progress-controls\"><button type=\"button\" data-progress-play aria-pressed=\"false\">再生</button><label for=\"progress-value\">進行率</label><input id=\"progress-value\" type=\"range\" min=\"0\" max=\"100\" value=\"35\"></div></div>",
+      "requires": "weskiii-system.css + ws-interactions.css + ws-interactions.js"
+    }
+  ]
+}

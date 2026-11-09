@@ -1,0 +1,80 @@
+/* weskiii store — proposed design system v2.0 | 2026-11-09
+Font files are not bundled. Load licensed webfonts with the provider's kit.
+Map licensed Japanese font to "Koburina"; confirm provider family names.
+*/
+:root {
+ --ws-white:#ffffff; --ws-ink:#232323; --ws-yellow:#f5eb35; --ws-gray:#e5e5e5;
+ --ws-muted:#686868; --ws-line:#e5e5e5;
+ --ws-ja:"Koburina","こぶりなゴシック","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+ --ws-display:"circe","Circe",var(--ws-ja);
+ --ws-body:"Open Sans",var(--ws-ja);
+ --ws-s1:4px; --ws-s2:8px; --ws-s3:12px; --ws-s4:16px; --ws-s6:24px;
+ --ws-s8:32px; --ws-s12:48px; --ws-s16:64px; --ws-s24:96px; --ws-s32:128px;
+ --ws-content:1200px; --ws-radius:8px; --ws-duration:180ms;
+}
+.ws { color:var(--ws-ink);background:var(--ws-white);font:400 16px/1.85 var(--ws-body);font-synthesis:none; }
+.ws *, .ws *::before,.ws *::after {box-sizing:border-box;}
+.ws :lang(ja) {font-family:var(--ws-ja);}
+.ws a:not(.ws-button) {color:inherit;text-underline-offset:.22em;}
+.ws img {display:block;max-width:100%;height:auto;}
+.ws-container {width:min(calc(100% - 96px),var(--ws-content));margin-inline:auto;}
+.ws-section {padding-block:96px;}
+.ws-eyebrow {font:700 12px/1.4 var(--ws-display);letter-spacing:.08em;}
+.ws-title {font:700 clamp(32px,4vw,56px)/1.2 var(--ws-display);letter-spacing:.025em;margin:16px 0 24px;text-wrap:balance;}
+.ws-copy {max-width:38em;line-height:1.85;letter-spacing:.035em;}
+.ws-button {display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;padding:12px 28px;border:1px solid var(--ws-ink);border-radius:999px;background:var(--ws-ink);color:var(--ws-white);font:600 14px/1.5 var(--ws-body);text-decoration:none;cursor:pointer;transition:background var(--ws-duration),color var(--ws-duration);}
+.ws-button:hover {background:#454545;}
+.ws-button--secondary {background:var(--ws-white);color:var(--ws-ink);}
+.ws-button--secondary:hover {background:var(--ws-gray);}
+.ws-button--accent{background:var(--ws-yellow);color:var(--ws-ink);border:1px solid var(--ws-yellow);}
+.ws-button--accent:hover{background:#e8de2c;border-color:#e8de2c;}
+.ws-button:disabled {background:var(--ws-gray);color:var(--ws-muted);border-color:var(--ws-gray);cursor:not-allowed;}
+.ws :focus-visible {outline:2px solid var(--ws-ink);outline-offset:4px;}
+.ws-header {display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px;border-bottom:1px solid var(--ws-line);}
+.ws-header img {width:96px;height:auto;}
+.ws-hero {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px;}
+.ws-hero__image {aspect-ratio:4/5;object-fit:cover;width:100%;}
+.ws-heading {display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:32px;}
+.ws-heading h2 {font:700 clamp(28px,3vw,40px)/1.2 var(--ws-display);margin:0;}
+.ws-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;}
+.ws-card {min-width:0;}
+.ws-card__media {background:var(--ws-gray);aspect-ratio:1;overflow:hidden;}
+.ws-card__media img {width:100%;height:100%;object-fit:contain;}
+.ws-card__body {padding-top:16px;}
+.ws-card h3 {font-size:18px;line-height:1.5;margin:8px 0;}
+.ws-price {font-family:var(--ws-body);font-variant-numeric:tabular-nums;}
+.ws-split {display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.ws-split img {width:100%;aspect-ratio:4/3;object-fit:cover;}
+.ws-tag {display:inline-flex;gap:8px;align-items:center;border:1px solid var(--ws-line);border-radius:999px;padding:4px 12px;font-size:12px;}
+.ws-faq {border-top:1px solid var(--ws-line);}
+.ws-faq details {border-bottom:1px solid var(--ws-line);padding:20px 0;}
+.ws-faq summary {cursor:pointer;min-height:24px;font-weight:600;}
+.ws-faq p {max-width:38em;margin:16px 0 0;}
+.ws-field {display:grid;gap:8px;max-width:480px;}
+.ws-field input {width:100%;min-height:48px;border:1px solid var(--ws-muted);border-radius:4px;padding:12px 16px;background:var(--ws-white);color:var(--ws-ink);font:inherit;}
+.ws-field input[aria-invalid="true"] {border:2px solid var(--ws-ink);}
+.ws-field small {font-size:12px;line-height:1.6;}
+.ws-cta {border-top:1px solid var(--ws-line);padding-block:64px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.ws-table {width:100%;border-collapse:collapse;font-size:14px;}
+.ws-table th,.ws-table td {text-align:left;border-bottom:1px solid var(--ws-line);padding:16px;}
+.ws-table th {background:var(--ws-gray);font-weight:600;}
+@media(max-width:767px){
+ .ws-container{width:calc(100% - 40px);} .ws-section{padding-block:64px;}
+ .ws-hero,.ws-split{grid-template-columns:1fr;gap:32px;}
+ .ws-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;}
+ .ws-header{min-height:64px;} .ws-title{font-size:32px;}
+ .ws-cta{align-items:flex-start;flex-direction:column;} .ws-heading{align-items:flex-start;}
+}
+@media(prefers-reduced-motion:reduce){.ws *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+
+/* Primary CTA always pairs ink with white; accent CTA uses yellow fill with ink text, limited to one per viewport. */
+.ws a.ws-button{color:var(--ws-white);background:var(--ws-ink);}
+.ws a.ws-button:hover{background:#454545;}
+.ws a.ws-button--secondary{color:var(--ws-ink);background:var(--ws-white);}
+.ws a.ws-button--secondary:hover{background:var(--ws-gray);}
+.ws a.ws-button--accent{background:var(--ws-yellow);color:var(--ws-ink);border:1px solid var(--ws-yellow);}
+.ws a.ws-button--accent:hover{background:#e8de2c;border-color:#e8de2c;}
+
+/* Image focal points are set per asset and composition. */
+.ws-focal-image{object-fit:cover;object-position:50% 78%;}
+.ws-card__media .ws-focal-image{object-fit:cover;object-position:50% 92%;}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "everyday-room",
+    "html": "<div class=\"ws-photo-type ws-photo-type--white\"><img src=\"photos/everyday-room.jpg\" width=\"1280\" height=\"1920\" alt=\"木のテーブルに手を添える人と、壁に広がる自然光\"><div class=\"ws-photo-type__copy\"><h3 class=\"ws-photo-type__en\" lang=\"en\">insight<br>for everyday.</h3><p class=\"ws-photo-type__ja\" lang=\"ja\">いつもの時間に、<br>小さな気づきを。</p></div></div>",
+    "requires": [
+      "weskiii-system.css",
+      "photo-typography.css"
+    ]
+  },
+  {
+    "id": "bottle-in-hand",
+    "html": "<div class=\"ws-photo-type ws-photo-type--white ws-photo-type--compact\"><img src=\"photos/bottle-in-hand.jpg\" width=\"1280\" height=\"1920\" alt=\"セージ色のボトルをストラップで持ち上げる手\"><div class=\"ws-photo-type__copy\"><h3 class=\"ws-photo-type__en\" lang=\"en\">in good<br>hands.</h3><p class=\"ws-photo-type__ja\" lang=\"ja\">手に取る理由が、<br>ちゃんとある。</p></div></div>",
+    "requires": [
+      "weskiii-system.css",
+      "photo-typography.css"
+    ]
+  },
+  {
+    "id": "cup-and-texture",
+    "html": "<div class=\"ws-photo-type ws-photo-type--white\"><img src=\"photos/cup-and-texture.jpg\" width=\"1280\" height=\"1920\" alt=\"木と布に囲まれた、両手ハンドル付きのカップ\"><div class=\"ws-photo-type__copy\"><h3 class=\"ws-photo-type__en\" lang=\"en\">in the<br>everyday.</h3><p class=\"ws-photo-type__ja\" lang=\"ja\">いつもの商品に、<br>使うよろこびを。</p></div></div>",
+    "requires": [
+      "weskiii-system.css",
+      "photo-typography.css"
+    ]
+  }
+]

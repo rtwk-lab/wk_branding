@@ -1,0 +1,110 @@
+{
+  "version": "1.4",
+  "name": "weskiii / natural light",
+  "basis": "RAW neutral starting point; not the original edit settings of the supplied JPEG photographs. Do not reapply to already graded JPEGs.",
+  "reference_photos": [
+    "weskiii store 2025 Dec1-06901.jpg",
+    "DSC00425.jpg",
+    "DSC09116.jpg",
+    "DSC08756.jpg"
+  ],
+  "raw_development": {
+    "white_balance_kelvin_start": [
+      4800,
+      5800
+    ],
+    "white_balance_delta_after_neutralization_K": [
+      -200,
+      300
+    ],
+    "tint_if_green_cast": [
+      2,
+      8
+    ],
+    "exposure_EV": [
+      0,
+      0.35
+    ],
+    "contrast": [
+      -10,
+      0
+    ],
+    "highlights": [
+      -25,
+      -10
+    ],
+    "shadows": [
+      5,
+      15
+    ],
+    "whites": [
+      -5,
+      5
+    ],
+    "blacks": [
+      -8,
+      0
+    ],
+    "texture": [
+      0,
+      8
+    ],
+    "clarity": [
+      -8,
+      0
+    ],
+    "dehaze": 0,
+    "vibrance": [
+      -10,
+      0
+    ],
+    "saturation": [
+      -5,
+      0
+    ],
+    "grain_amount": [
+      0,
+      5
+    ],
+    "HSL_saturation_yellow": [
+      -15,
+      -5
+    ],
+    "HSL_saturation_green": [
+      -15,
+      -5
+    ],
+    "HSL_saturation_orange": [
+      -5,
+      0
+    ]
+  },
+  "delivery": {
+    "color_space": "sRGB",
+    "long_edge_web_px": [
+      1600,
+      2400
+    ],
+    "jpeg_quality_percent": [
+      80,
+      88
+    ],
+    "css_filter": "none",
+    "supplied_JPEG_additional_color_processing": false
+  },
+  "photography": {
+    "light": "window / natural side-light or soft back-light",
+    "artificial_mixed_light": false,
+    "aperture_f": [
+      2.8,
+      5.6
+    ],
+    "shutter_static_min": "1/125",
+    "shutter_people_min": "1/250",
+    "ISO_start": [
+      100,
+      1600
+    ],
+    "notes": "Prioritize motion and skin color; raise ISO if required. No direct flash."
+  }
+}

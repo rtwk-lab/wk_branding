@@ -1,0 +1,51 @@
+[
+  {
+    "id": "story",
+    "ratio": "9:16",
+    "size": "1080 × 1920",
+    "html": "<div class=\"ws-art ws-art--story\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/everyday-room.jpg\" alt=\"木のテーブルに手を添える人と、壁に広がる自然光\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / STORIES</p><h3 class=\"ws-art__title\" lang=\"en\">insight<br>for little<br>moments.</h3><p class=\"ws-art__sub\" lang=\"ja\">日常の、小さな発見。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "feed",
+    "ratio": "4:5",
+    "size": "1080 × 1350",
+    "html": "<div class=\"ws-art ws-art--feed\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/breakfast-moment.jpg\" alt=\"朝食の前で手を合わせ、窓の方を見る子ども\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / FEED</p><h3 class=\"ws-art__title\" lang=\"en\">inspire<br>your everyday.</h3><p class=\"ws-art__sub\" lang=\"ja\">いつもの時間を、少し心地よく。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "square",
+    "ratio": "1:1",
+    "size": "1080 × 1080",
+    "html": "<div class=\"ws-art ws-art--square\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/cup-and-texture.jpg\" alt=\"木と布に囲まれた、両手ハンドル付きのカップ\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / SQUARE</p><h3 class=\"ws-art__title\" lang=\"en\">ideas for<br>everyday.</h3><p class=\"ws-art__sub\" lang=\"ja\">暮らしを見つめる、<br>新しい視点。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "paper",
+    "ratio": "1:√2",
+    "size": "A3 / 297 × 420 mm",
+    "html": "<div class=\"ws-art ws-art--paper\"><div class=\"ws-art__inner\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / POSTER</p><h3 class=\"ws-art__title\" lang=\"en\">invite<br>a little<br>joy.</h3><p class=\"ws-art__sub\" lang=\"ja\">日常に、小さなよろこびを。</p></div><p class=\"ws-art__signature\">［開催日］ / ［会場名］</p></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "landscape",
+    "ratio": "3:2",
+    "size": "1500 × 1000",
+    "html": "<div class=\"ws-art ws-art--landscape\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/everyday-room.jpg\" alt=\"木のテーブルに手を添える人と、壁に広がる自然光\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / EDITORIAL</p><h3 class=\"ws-art__title\" lang=\"en\">in good<br>company.</h3><p class=\"ws-art__sub\" lang=\"ja\">商品と人の、<br>ちょうどいい関係。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "hero",
+    "ratio": "16:9",
+    "size": "1920 × 1080",
+    "html": "<div class=\"ws-art ws-art--hero\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/bottle-in-hand.jpg\" alt=\"セージ色のボトルをストラップで持ち上げる手\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / LP HERO</p><h3 class=\"ws-art__title\" lang=\"en\">we choose<br>with care.</h3><p class=\"ws-art__sub\" lang=\"ja\">美しさと、使いやすさと、その背景。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  },
+  {
+    "id": "banner",
+    "ratio": "3:1",
+    "size": "1800 × 600",
+    "html": "<div class=\"ws-art ws-art--banner\"><div class=\"ws-art__inner\"><img class=\"ws-art__photo\" src=\"photos/cup-and-texture.jpg\" alt=\"木と布に囲まれた、両手ハンドル付きのカップ\"><div class=\"ws-art__copy\"><p class=\"ws-art__eyebrow\">WESKIII STORE / BANNER</p><h3 class=\"ws-art__title\" lang=\"en\">ideas for everyday.</h3><p class=\"ws-art__sub\" lang=\"ja\">暮らしのヒントを、ひとつ。</p></div></div></div>",
+    "requires": "weskiii-system.css + ratio-layouts.css"
+  }
+]

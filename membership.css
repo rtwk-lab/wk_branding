@@ -1,0 +1,8 @@
+/* weskiii store メンバーシップ — source SVGs keep their original geometry. */
+.ws-membership-benefit{display:grid;gap:16px;color:var(--ws-ink,#232323);background:var(--ws-white,#fff);}
+.ws-membership-benefit__photo{display:block;width:100%;height:auto;aspect-ratio:29/36;object-fit:contain;}
+.ws-membership-benefit__icon{display:flex;align-items:center;gap:16px;min-height:56px;}
+.ws-membership-benefit__icon img{height:40px;width:auto;max-width:80px;object-fit:contain;}
+.ws-membership-benefit__name{font:600 16px/1.6 var(--ws-ja,sans-serif);margin:0;}
+.ws-membership-benefit__conditions{font:400 13px/1.8 var(--ws-ja,sans-serif);margin:0;}
+.ws-membership-benefit__ticket{display:block;width:min(100%,320px);height:auto;}
